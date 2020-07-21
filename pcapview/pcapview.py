@@ -38,6 +38,7 @@ def ajax():
         pcap_file = str(int(time.time())) + secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], pcap_file))
         ipfs_res = client.add(pcap_file)
+        ipfs_res = ipfs_res.as_json()
         print(ipfs_res)
     else:
         abort(500)
@@ -116,4 +117,4 @@ def get_conversation(p, conversations):
     return None
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)

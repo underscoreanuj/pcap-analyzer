@@ -1,0 +1,16 @@
+pip install -r requirements.txt
+
+sudo apt-get install tshark
+
+install ipfs from here:
+    https://docs.ipfs.io/how-to/command-line-quick-start/#install-ipfs
+
+ensure that ipfs deamon is running before running the server
+
+
+
+
+I used:
+            go-ipfs version: 0.6.0
+alongside
+            ipfshttpclient==0.6.0.post1
